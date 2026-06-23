@@ -1007,7 +1007,7 @@ function seedData() {
 
   // Seed an advance payment
   const advances = [
-   
+ { id:uid(), customerName:"Grace Eze", customerPhone:"08033221100", product:"Premium Rice x5", amountPaid:150000, totalCost:225000, balance:75000, expectedPickup:futureDate(7), status:"pending", notes:"Will collect after payday", createdAt:Date.now()-86400000*2 }   
   ];
   advances.forEach(a => { if (!a.createdAt) a.createdAt = seedNow; });
   Store.set("advance", advances);
